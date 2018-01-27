@@ -3,7 +3,7 @@ COLOR_YELLOW="\033[0;33m"
 COLOR_GREEN="\033[0;32m"
 COLOR_OCHRE="\033[38;5;95m"
 COLOR_BLUE="\033[0;34m"
-COLOR_WHITE="\033[0;37m"
+COLOR_WHITE="\033[0;39m"
 COLOR_RESET="\033[0m"
 
 function git_color {
@@ -38,6 +38,6 @@ PS1="\[$COLOR_OCHRE\][\$(date +%k:%M:%S)]" # Timestamps
 PS1+="\[$COLOR_WHITE\][\W]" # Current directory, in white: [~]
 PS1+="\[\$(git_color)\]"  # Set git status color
 PS1+="\$(git_branch)"     # Add current branch
-PS1+="\[$COLOR_BLUE\]\$\[$COLOR_RESET\] "
+PS1+="\[$COLOR_BLUE\]\$>\[$COLOR_RESET\] "
 
 export PS1
